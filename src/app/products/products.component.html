@@ -15,6 +15,7 @@
       <p class="card-text">{{p.like}}</p>
       <button class="btn btn-primary" (click)="buy(i)" [disabled]="p.quantity==0" >Buy</button>
       <button class="btn btn-primary" (click)="like(i)">Like</button>  
+      <button class="btn btn-primary" [routerLink]="['/product',p.id]" >Details</button>
     </div>
   </div>
 </div>

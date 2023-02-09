@@ -1,0 +1,26 @@
+<input #search
+    (keyup.enter)="Search(search.value)"
+    (blur)="Search(search.value); search.value=''">
+  <button class="btn btn-success" type="button" (click)="Search(search.value)">Search</button>
+  
+<div class="row">
+    <div class="col-md-4" *ngFor="let p of listEmploi, let i=index">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+       <h5> Reference :</h5> 
+      <p class="card-text">{{p.reference}}</p>
+      <h5> Titre :</h5> 
+      <p class="card-text">{{p.titre}}</p>
+      <h5> Entreprise :</h5> 
+      <p class="card-text">{{p.entreprise}}</p>
+      <h5> Etat :</h5> 
+      <p class="card-text">{{p.etat}}</p>
+      <button class="btn btn-success" [disabled]="p.etat == false">Postuler</button> <br> 
+      <button class="btn btn-success" (click)="count(i)" >Bilan</button>
+    
+    </div>
+    
+    </div>
+  </div>
+</div> <br>
+

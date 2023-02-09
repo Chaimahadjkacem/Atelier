@@ -1,0 +1,28 @@
+<p>{{titre}}</p>
+
+<input /> <!--[(NgModel)]='count(i)'--> 
+<div *ngFor="let p of listeArticles , let i=index" >
+    
+    <div *ngIf="p.categorie!='Travail'">
+        <div *ngIf="p.categorie =='Education'" style="color:#0d6efd ">
+        <fieldset>
+            <legend>{{ p.titre }}</legend>
+            Auteur : {{ p.auteur }} <br>
+            Contenu : {{ p.contenu }}<br>
+            Date : {{ p.date }}
+           
+        </fieldset>
+    </div>
+    <div *ngIf="p.categorie!='Travail'">
+        <div *ngIf="p.categorie !='Education'">
+        <fieldset>
+            <legend>{{ p.titre }}</legend>
+            Auteur : {{ p.auteur }} <br>
+            Contenu : {{ p.contenu }}<br>
+            Date : {{ p.date }}
+           
+        </fieldset>
+    </div>
+</div>
+
+
