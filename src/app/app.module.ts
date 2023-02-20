@@ -9,6 +9,9 @@ import { ArticlesComponentComponent } from './articles-component/articles-compon
 import { DetailProductsComponent } from './detail-products/detail-products.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormProductComponent } from './form-product/form-product.component';
+import { FormsModule } from '@angular/forms';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ArticlesComponentComponent,
     DetailProductsComponent,
     NavBarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FormProductComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
